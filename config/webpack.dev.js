@@ -9,5 +9,9 @@ module.exports = merge(common, {
     path: resolveApp('dist'),
     clean: true //编译前清除目录
   },
-  devtool: 'eval-cheap-module-source-map'
+  devtool: 'eval-cheap-module-source-map',
+  devServer: {
+    contentBase: './dist',
+    port: 9000
+  }
 })
